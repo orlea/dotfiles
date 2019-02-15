@@ -1,6 +1,6 @@
 #!/bin/bash
 
- DOT_FILES=(.zshrc .ssh/config)
+ DOT_FILES=(.zshrc)
 
 for file in ${DOT_FILES[@]}
 do
