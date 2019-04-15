@@ -110,6 +110,15 @@ setopt hist_reduce_blanks
 # 高機能なワイルドカード展開を使用する
 setopt extended_glob
 
+# 補完候補一覧表示
+setopt auto_list
+
+# 補完キー連打で候補順に補完
+setopt auto_menu
+
+# "="以降も補完 ex:--option=value
+setopt magic_equal_subst
+
 ########################################
 # キーバインド
 
