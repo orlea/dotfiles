@@ -16,4 +16,7 @@ let NERDTreeShowHidden=1
 
 "vim本体設定
 set mouse=a
-
+set encoding=utf-8
+scriptencoding utf-8
+set noswapfile
+set number
