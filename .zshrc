@@ -1,20 +1,12 @@
-# 少し凝った zshrc
-# License : MIT
-# http://mollifier.mit-license.org/
-
-########################################
 # 環境変数
 export LANG=ja_JP.UTF-8
 
 
-# 色を使用出来るようにする
+# 色を使用
 autoload -Uz colors
 colors
 
-# emacs 風キーバインドにする
-bindkey -e
-
-# ヒストリの設定
+# ヒストリ
 HISTFILE=~/.zsh_history
 HISTSIZE=1000000
 SAVEHIST=1000000
@@ -35,9 +27,7 @@ select-word-style default
 zstyle ':zle:*' word-chars " /=;@:{},|"
 zstyle ':zle:*' word-style unspecified
 
-########################################
 # 補完
-# 補完機能を有効にする
 fpath=(/usr/share/zsh/site-functions $fpath)
 autoload -Uz compinit
 compinit
@@ -55,8 +45,6 @@ zstyle ':completion:*:sudo:*' command-path /usr/local/sbin /usr/local/bin \
 # ps コマンドのプロセス名補完
 zstyle ':completion:*:processes' command 'ps x -o pid,s,args'
 
-
-########################################
 # vcs_info
 autoload -Uz vcs_info
 autoload -Uz add-zsh-hook
@@ -70,16 +58,13 @@ function _update_vcs_info_msg() {
 }
 add-zsh-hook precmd _update_vcs_info_msg
 
-
-########################################
-# オプション
-# 日本語ファイル名を表示可能にする
+# 日本語ファイル名
 setopt print_eight_bit
 
-# beep を無効にする
+# beep を無効
 setopt no_beep
 
-# フローコントロールを無効にする
+# フローコントロールを無効
 setopt no_flow_control
 
 # Ctrl+Dでzshを終了しない
@@ -88,10 +73,10 @@ setopt ignore_eof
 # '#' 以降をコメントとして扱う
 setopt interactive_comments
 
-# ディレクトリ名だけでcdする
+# ディレクトリ名だけでcd
 setopt auto_cd
 
-# cd したら自動的にpushdする
+# cd したら自動的にpushd
 setopt auto_pushd
 # 重複したディレクトリを追加しない
 setopt pushd_ignore_dups
@@ -120,22 +105,17 @@ setopt auto_menu
 # "="以降も補完 ex:--option=value
 setopt magic_equal_subst
 
-########################################
 # キーバインド
 
 # ^R で履歴検索をするときに * でワイルドカードを使用出来るようにする
 bindkey '^R' history-incremental-pattern-search-backward
 
-########################################
 # エイリアス
-
 alias la='ls -a'
 alias ll='ls -l'
-
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
-
 alias mkdir='mkdir -p'
 
 # sudo の後のコマンドでエイリアスを有効にする
@@ -160,7 +140,6 @@ fi
 
 
 
-########################################
 # OS 別の設定
 case ${OSTYPE} in
     darwin*)
@@ -174,4 +153,3 @@ case ${OSTYPE} in
         ;;
 esac
 
-# vim:set ft=zsh:
