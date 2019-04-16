@@ -6,4 +6,5 @@ Linux用のつもり
 ```
 git clone https://github.com/orlea/dotfiles.git
 ./dotfiles/setup.sh
+./dotfiles/initialize.sh
 ```
