@@ -7,4 +7,4 @@ do
     ln -sf $HOME/.dotfiles/$file $HOME/$file
 done
 
-ln -sf $HOME/.dotfiles/.ssh/config $HOME/.ssh/config
+#ln -sf $HOME/.dotfiles/.ssh/config $HOME/.ssh/config
