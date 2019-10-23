@@ -1,6 +1,5 @@
 # 環境変数
-export LANG=ja_JP.UTF-8
-
+export LANG=en_US.UTF-8
 
 # 色を使用
 autoload -Uz colors
