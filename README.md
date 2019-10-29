@@ -20,7 +20,7 @@ wget -O - https://raw.githubusercontent.com/orlea/dotfiles/master/install.sh | s
 or
 
 ```
-git clone https://github.com/orlea/dotfiles.git
-./dotfiles/_setup.sh
-./dotfiles/_initialize.sh
+git clone https://github.com/orlea/dotfiles.git .dotfiles
+./.dotfiles/_setup.sh
+./.dotfiles/_initialize.sh
 ```
