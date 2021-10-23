@@ -21,3 +21,8 @@ set encoding=utf-8
 scriptencoding utf-8
 set noswapfile
 set number
+set expandtab
+set tabstop=2
+set shiftwidth=2
+set autoindent
+set smartindent
