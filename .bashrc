@@ -116,4 +116,14 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# tmux logから制御文字を削除
 alias log-mold="sed -r 's~\x01?(\x1B\(B)?\x1B\[([0-9;]*)?[JKmsu]\x02?~~g'"
+
+# Avoid duplicates
+HISTCONTROL=ignoredups:erasedups # Ubuntu default is ignoreboth
+# When the shell exits, append to the history file instead of overwriting it
+shopt -s histappend  # In Ubuntu this is already set by default
+
+# After each command, append to the history file and reread it
+PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
+
