@@ -127,3 +127,6 @@ shopt -s histappend  # In Ubuntu this is already set by default
 # After each command, append to the history file and reread it
 PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
 
+# 事故防止
+alias rm='rm -i'i
+
