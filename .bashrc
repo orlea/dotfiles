@@ -132,4 +132,8 @@ alias rm='rm -i'i
 
 # ignore auto completion case insensitive
 bind 'set completion-ignore-case on'
+bind 'set show-all-if-ambiguous on'
+bind 'TAB:menu-complete'
+bind '"\e[Z":menu-complete-backward'
+#complete -cf sudo
 
