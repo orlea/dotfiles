@@ -130,3 +130,6 @@ PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; h
 # 事故防止
 alias rm='rm -i'i
 
+# ignore auto completion case insensitive
+bind 'set completion-ignore-case on'
+
