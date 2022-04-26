@@ -118,6 +118,9 @@ fi
 
 # tmux logから制御文字を削除
 alias log-mold="sed -r 's~\x01?(\x1B\(B)?\x1B\[([0-9;]*)?[JKmsu]\x02?~~g'"
+# tmux pipe-paneが変なのだらけになるのを防止
+bind 'set enable-bracketed-paste off'
+
 
 # Avoid duplicates
 HISTCONTROL=ignoredups:erasedups # Ubuntu default is ignoreboth
