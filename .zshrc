@@ -137,3 +137,6 @@ case ${OSTYPE} in
         ;;
 esac
 
+# tmux logから制御文字を削除
+alias log-mold="sed -r 's~\x01?(\x1B\(B)?\x1B\[([0-9;]*)?[JKmsu]\x02?~~g'"
+
