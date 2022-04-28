@@ -116,6 +116,7 @@ alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
 alias mkdir='mkdir -p'
+alias sosh='source ~/.zshrc'
 
 # sudo の後のコマンドでエイリアスを有効にする
 alias sudo='sudo '
