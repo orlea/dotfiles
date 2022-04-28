@@ -141,3 +141,9 @@ esac
 # tmux logから制御文字を削除
 alias log-mold="sed -r 's~\x01?(\x1B\(B)?\x1B\[([0-9;]*)?[JKmsu]\x02?~~g'"
 
+# tmux
+alias log-trim=' () {
+  cat $1
+  tmux capture-pane -p -S -99999 > $1.trimed.txt
+}'
+
